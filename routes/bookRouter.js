@@ -1,5 +1,6 @@
 const express = require("express");
 const bookRouter = express.Router();
+const setGeneralResponse = require('../utils/utils')
 
 function router(Book) {
   bookRouter.use("/books/:bookId", (req, res, next) => {
@@ -106,11 +107,4 @@ function router(Book) {
   return bookRouter;
 }
 module.exports = router;
-function setGeneralResponse(input) {
-  return {
-    code: 200,
-    message: "successful",
-    recordCount: input.length,
-    result: input
-  };
-}
+
