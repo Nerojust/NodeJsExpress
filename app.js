@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 
 const Book = require("./models/bookModel");
 const bookRouter = require("./routes/bookRouter")(Book);
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 const mongoose = require("mongoose");
 const db = mongoose.connect(
